@@ -37,6 +37,7 @@
           </elementProp>
         </collectionProp>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
     </TestPlan>
     <hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
@@ -313,7 +314,7 @@ ${__setProperty(firstName, ${firstName})}</stringProp>
           </JSONPostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Project">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Project" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/create_project</stringProp>
@@ -332,7 +333,7 @@ ${__setProperty(firstName, ${firstName})}</stringProp>
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -365,7 +366,7 @@ ${__setProperty(firstName, ${firstName})}</stringProp>
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -592,7 +593,7 @@ ${__setProperty(project_name, ${project_name})}
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Project">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get Project" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/checkAccessSettingStatus</stringProp>
@@ -719,7 +720,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload scraped file">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload scraped file" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/scrap_file?replace_exiting_file=0&amp;filePath=../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Configuration&amp;scrapper=scrapper.csv</stringProp>
@@ -742,7 +743,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -755,7 +756,7 @@ ${__setProperty(project_name, ${project_name})}
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -765,7 +766,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -1094,7 +1095,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Log">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="View Log" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/log</stringProp>
@@ -1211,7 +1212,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Assign Project">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Assign Project" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/assign_unassign_project</stringProp>
@@ -1338,7 +1339,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Assign Project">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Assign Project" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/assign_unassign_project</stringProp>
@@ -1465,7 +1466,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Access Setting">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Access Setting" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/getProjectAccess/${Proj_id}</stringProp>
@@ -1592,7 +1593,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Edit Access Setting">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Edit Access Setting" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/checkAccessSettingStatus</stringProp>
@@ -1634,7 +1635,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -1709,7 +1710,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Edit Access Setting">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Edit Access Setting" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/checkAccessSettingStatus</stringProp>
@@ -1751,7 +1752,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -2058,7 +2059,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Restore_1">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Restore_1" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/restore/${__property(project_id)}</stringProp>
@@ -2179,7 +2180,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Restore_2">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Restore_2" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/restore/${__property(project_id)}</stringProp>
@@ -6329,7 +6330,7 @@ ${__setProperty(project_name, ${project_name})}
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customize Framework_Python">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Customize Framework_Python" enabled="true">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -6340,7 +6341,7 @@ ${__setProperty(project_name, ${project_name})}
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Customize framework">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Customize framework" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/getCustomAttachment?filePath=AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Custom_ScriptGeneration&amp;projectId=${__property(project_id)}</stringProp>
@@ -6451,7 +6452,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create File using plus icon">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create File using plus icon" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/createFile</stringProp>
@@ -6470,7 +6471,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -6480,7 +6481,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6517,7 +6518,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="2108916931">Cccc file created successfully</stringProp>
             </collectionProp>
@@ -6527,7 +6528,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6578,7 +6579,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload File using plus icon">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upload File using plus icon" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/uploadCodeFile?filePath=..%2FAlgoQA_Data%2Fuser_5489%2Fproject_25639%2FCustom_ScriptGeneration-PYTHON%20appium</stringProp>
@@ -6611,7 +6612,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6648,7 +6649,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="1031235555">File uploaded successfully</stringProp>
             </collectionProp>
@@ -6658,7 +6659,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6709,7 +6710,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Folder">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Folder" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/createFolder</stringProp>
@@ -6728,7 +6729,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -6738,7 +6739,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6775,7 +6776,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-720887343">Ffff folder created successfully</stringProp>
             </collectionProp>
@@ -6785,7 +6786,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6822,7 +6823,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -6836,7 +6837,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Rename">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Rename" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/renameFile</stringProp>
@@ -6855,7 +6856,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -6865,7 +6866,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6902,7 +6903,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-680292125">File renamed Cccc to Ccccdd</stringProp>
             </collectionProp>
@@ -6912,7 +6913,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -6949,7 +6950,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -6963,7 +6964,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/deleteFile</stringProp>
@@ -6982,7 +6983,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -6992,7 +6993,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7029,7 +7030,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-744300406">File Ccccdd deleted successfully</stringProp>
             </collectionProp>
@@ -7039,7 +7040,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7076,7 +7077,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -7090,7 +7091,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Dlete Folder">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Dlete Folder" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/deleteFolder</stringProp>
@@ -7109,7 +7110,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -7119,7 +7120,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7156,7 +7157,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="-255391107">{&quot;ok&quot;:true,&quot;message&quot;:&quot;Successfully deleted&quot;}</stringProp>
             </collectionProp>
@@ -7166,7 +7167,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7203,7 +7204,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -7217,7 +7218,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on file_1">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on file_1" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/lockFile</stringProp>
@@ -7236,7 +7237,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -7246,7 +7247,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7293,7 +7294,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7330,7 +7331,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -7344,7 +7345,7 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on file_2">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click on file_2" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/algoAF/project/getFileData</stringProp>
@@ -7363,384 +7364,7 @@ ${__setProperty(project_name, ${project_name})}
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save">
-          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/algoAF/project/saveFileData</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;projectId&quot;:&quot;${__property(project_id)}&quot;,&quot;filePath&quot;:&quot;/home/ubuntu/AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Custom_ScriptGeneration-JAVA selenium/AlgoAFScript/pom.xml&quot;,&quot;fileName&quot;:&quot;pom.xml&quot;,&quot;data&quot;:&quot;&lt;project xmlns=\&quot;http://maven.apache.org/POM/4.0.0\&quot;\r\n\txmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot;\r\n\txsi:schemaLocation=\&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\&quot;&gt;\r\n\t&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;\r\n\t&lt;groupId&gt;JavaSeleniumAlgoAfScripts&lt;/groupId&gt;\r\n\t&lt;artifactId&gt;JavaSeleniumAlgoAfScripts&lt;/artifactId&gt;\r\n\t&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;\r\n\t&lt;properties&gt;\r\n\t\t&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;\r\n\t\t&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;\r\n\t\t&lt;encoding&gt;UTF-8&lt;/encoding&gt;\r\n\t\t&lt;aspectj.version&gt;1.8.4&lt;/aspectj.version&gt;\r\n\t\t&lt;allure.version&gt;1.5.4&lt;/allure.version&gt;\r\n\t&lt;/properties&gt;\r\n\t&lt;dependencies&gt;\r\n\t&lt;dependency&gt;\r\n    &lt;groupId&gt;io.github.bonigarcia&lt;/groupId&gt;\r\n    &lt;artifactId&gt;webdrivermanager&lt;/artifactId&gt;\r\n    &lt;version&gt;5.6.4&lt;/version&gt;\r\n    &lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;junit&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;junit&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;4.13.2&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;selenium-java&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;4.19.1&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.slf4j&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.7.36&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-java&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;\r\n    &lt;artifactId&gt;commons-csv&lt;/artifactId&gt;\r\n    &lt;version&gt;1.11.0&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-picocontainer&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    \r\n&lt;/dependency&gt;\r\n\r\n&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;io.percy&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;percy-java-selenium&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;1.3.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;allure-cucumber-jvm&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.14.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-junit&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    \r\n&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;\r\n    &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;\r\n    &lt;version&gt;2.0.29&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;com.openhtmltopdf&lt;/groupId&gt;\r\n    &lt;artifactId&gt;openhtmltopdf-pdfbox&lt;/artifactId&gt;\r\n    &lt;version&gt;1.0.10&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;com.openhtmltopdf&lt;/groupId&gt;\r\n    &lt;artifactId&gt;openhtmltopdf-core&lt;/artifactId&gt;\r\n    &lt;version&gt;1.0.10&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;org.xhtmlrenderer&lt;/groupId&gt;\r\n    &lt;artifactId&gt;flying-saucer-pdf&lt;/artifactId&gt;\r\n    &lt;version&gt;9.1.22&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;dependency&gt;\r\n        &lt;groupId&gt;com.itextpdf&lt;/groupId&gt;\r\n        &lt;artifactId&gt;itextpdf&lt;/artifactId&gt;\r\n        &lt;version&gt;5.5.13.2&lt;/version&gt;\r\n    &lt;/dependency&gt;\r\n    &lt;dependency&gt;\r\n        &lt;groupId&gt;com.itextpdf.tool&lt;/groupId&gt;\r\n        &lt;artifactId&gt;xmlworker&lt;/artifactId&gt;\r\n        &lt;version&gt;5.5.13.2&lt;/version&gt;\r\n    &lt;/dependency&gt;\r\n\r\n\r\n  \r\n&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-jvm&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    &lt;type&gt;pom&lt;/type&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n   &lt;groupId&gt;tech.grasshopper&lt;/groupId&gt;\r\n   &lt;artifactId&gt;extentreports-cucumber7-adapter&lt;/artifactId&gt;\r\n   &lt;version&gt;1.7.0&lt;/version&gt;\r\n    &lt;exclusions&gt;\r\n   \t&lt;exclusion&gt;\r\n   \t\t&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;\r\n   \t\t&lt;artifactId&gt;lombok&lt;/artifactId&gt;\r\n   \t&lt;/exclusion&gt;\r\n   &lt;/exclusions&gt;\r\n&lt;/dependency&gt;\r\n\r\n&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.googlecode.json-simple&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;json-simple&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.1.1&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.json&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;json&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;20211205&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.esotericsoftware.yamlbeans&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;yamlbeans&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.13&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.11.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.fasterxml.jackson.dataformat&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;jackson-dataformat-yaml&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.11.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t&lt;groupId&gt;org.unix4j&lt;/groupId&gt;\r\n\t&lt;artifactId&gt;unix4j-command&lt;/artifactId&gt;\r\n\t&lt;version&gt;0.6&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;!-- https://mvnrepository.com/artifact/net.lingala.zip4j/zip4j --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;net.lingala.zip4j&lt;/groupId&gt;\r\n    &lt;artifactId&gt;zip4j&lt;/artifactId&gt;\r\n    &lt;version&gt;2.10.0&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\r\n\t\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;log4j&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;log4j&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.2.17&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.microsoft.sqlserver&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;mssql-jdbc&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;9.2.1.jre8&lt;/version&gt;\r\n\t\t\t\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;!-- &lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.vimalselvam&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;cucumber-extentsreport&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;3.0.2&lt;/version&gt;\r\n\t\t&lt;/dependency&gt; --&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.github.mkolisnyk&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;cucumber-runner&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.3.5&lt;/version&gt;\r\n\t\t\t\r\n\t\t\t\t&lt;exclusions&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xerces&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xerces&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xerces&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xml-apis&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xml-apis&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xml-apis&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xmlParserAPIs&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n    &lt;/exclusions&gt; \r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;io.rest-assured&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;rest-assured&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;5.1.1&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;mysql&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;8.0.28&lt;/version&gt; \r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\t\t&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;org.apache.poi&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;poi&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;3.17&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;org.apache.poi&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;3.17&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.jcraft&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;jsch&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;0.1.55&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;org.mongodb&lt;/groupId&gt;\r\n    &lt;artifactId&gt;mongodb-driver&lt;/artifactId&gt;\r\n    &lt;version&gt;3.12.11&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;commons-io&lt;/groupId&gt;\r\n    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;\r\n    &lt;version&gt;2.11.0&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\r\n\r\n\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-core&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    &lt;scope&gt;test&lt;/scope&gt;\r\n&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;pdfbox&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;2.0.21&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\r\n\t\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;gson&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.5&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n            &lt;groupId&gt;org.testng&lt;/groupId&gt;\r\n            &lt;artifactId&gt;testng&lt;/artifactId&gt;\r\n            &lt;version&gt;6.9.10&lt;/version&gt;\r\n            &lt;scope&gt;test&lt;/scope&gt;\r\n        &lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t    &lt;groupId&gt;net.rcarz&lt;/groupId&gt;\r\n\t\t    &lt;artifactId&gt;jira-client&lt;/artifactId&gt;\r\n\t\t    &lt;version&gt;0.5&lt;/version&gt;  \r\n\t\t    &lt;scope&gt;compile&lt;/scope&gt; \r\n \t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.apache.commons&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;commons-csv&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.9.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;3.0.0-M4&lt;/version&gt;\r\n\t\t\t&lt;type&gt;maven-plugin&lt;/type&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;ru.yandex.qatools.allure&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;allure-cucumber-jvm-adaptor&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.6.4&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n        &lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.github.stephenc.monte&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;monte-screen-recorder&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;0.7.7.0&lt;/version&gt;\r\n\t    &lt;/dependency&gt;\r\n\t&lt;/dependencies&gt;\r\n\t&lt;build&gt;\r\n\t&lt;plugins&gt;\r\n\t\t\t&lt;plugin&gt;\r\n\t\t\t\t&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;\r\n\t\t\t\t&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;\r\n\t\t\t\t&lt;version&gt;2.19.1&lt;/version&gt;\r\n\t\t\t\t&lt;configuration&gt;\r\n\t\t\t\t\t&lt;testFailureIgnore&gt;false&lt;/testFailureIgnore&gt;\r\n\t\t\t\t&lt;/configuration&gt;\r\n\t\t\t\t&lt;dependencies&gt;\r\n\t\t\t\t    &lt;dependency&gt;\r\n        \t\t\t\t&lt;groupId&gt;org.apache.maven.surefire&lt;/groupId&gt;\r\n       \t\t\t\t\t&lt;artifactId&gt;surefire-junit47&lt;/artifactId&gt;\r\n        \t\t\t\t&lt;version&gt;2.19.1&lt;/version&gt;\r\n      \t\t\t\t&lt;/dependency&gt;\r\n\t\t\t\t\t&lt;dependency&gt;\r\n\t\t\t\t\t\t&lt;groupId&gt;org.aspectj&lt;/groupId&gt;\r\n\t\t\t\t\t\t&lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;\r\n\t\t\t\t\t\t&lt;version&gt;${aspectj.version}&lt;/version&gt;\r\n\t\t\t\t\t&lt;/dependency&gt;\r\n\t\t\t\t&lt;/dependencies&gt;\r\n\t\t\t&lt;/plugin&gt;\r\n\t\t&lt;/plugins&gt;\r\n\t&lt;/build&gt;\r\n\t&lt;reporting&gt;\r\n\t\t&lt;excludeDefaults&gt;true&lt;/excludeDefaults&gt;\r\n\t\t&lt;plugins&gt;\r\n\t\t\t&lt;plugin&gt;\r\n\t\t\t\t&lt;groupId&gt;ru.yandex.qatools.allure&lt;/groupId&gt;\r\n\t\t\t\t&lt;artifactId&gt;allure-maven-plugin&lt;/artifactId&gt;\r\n\t\t\t\t&lt;version&gt;2.5&lt;/version&gt;\r\n\t\t\t&lt;/plugin&gt;\r\n\t\t&lt;/plugins&gt;\r\n\t&lt;/reporting&gt;\r\n&lt;/project&gt;\r\nallure-cucumber-jvm-adaptor\r\n&quot;}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="240304036">File saved successfully</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Script">
-          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/algoAF/project/uploadCustomAttachment?filePath=..%2FAlgoQA_Data%2Fuser_${__property(user_id)}%2Fproject_${__property(project_id)}%2FCustom_ScriptGeneration-JAVA%20selenium&amp;projectId=${__property(project_id)}</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="false">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="240304036">File saved successfully</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">content-type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
-      </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Custom setting editor">
-        <intProp name="ThreadGroup.num_threads">1</intProp>
-        <intProp name="ThreadGroup.ramp_time">1</intProp>
-        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
-          <stringProp name="LoopController.loops">1</stringProp>
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-        </elementProp>
-      </ThreadGroup>
-      <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Configuration settings">
-          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/algoAF/project/getConfigSetting</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;projectId&quot;:&quot;${__property(project_id)}&quot;,&quot;folderPath&quot;:&quot;../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Utility&quot;,&quot;fileName&quot;:&quot;AFSettings.json&quot;}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -7824,7 +7448,7 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
             <collectionProp name="HeaderManager.headers">
               <elementProp name="" elementType="Header">
                 <stringProp name="Header.name">content-type</stringProp>
@@ -7838,10 +7462,10 @@ ${__setProperty(project_name, ${project_name})}
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Config setting">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/algoAF/project/saveConfigSettingData</stringProp>
+          <stringProp name="HTTPSampler.path">/algoAF/project/saveFileData</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -7850,14 +7474,14 @@ ${__setProperty(project_name, ${project_name})}
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;projectId&quot;:&quot;${__property(project_id)}&quot;,&quot;folderPath&quot;:&quot;../AlgoQA_Data/user_5489/project_${__property(project_id)}/Utility&quot;,&quot;fileName&quot;:&quot;AFSettings.json&quot;,&quot;data&quot;:{&quot;AutomationType&quot;:&quot;Java Selenium&quot;,&quot;CustomMethodFileName&quot;:[],&quot;CustomMethodsStart&quot;:{&quot;key_name&quot;:&quot;Custom Action&quot;,&quot;value_name&quot;:&quot;Method&quot;,&quot;description&quot;:&quot;This is description for Custom Method List&quot;,&quot;list&quot;:[]},&quot;ObjectRepositoryStart&quot;:{&quot;key_name&quot;:&quot;ObjectRepo&quot;,&quot;value_name&quot;:&quot;locator&quot;,&quot;description&quot;:&quot;This is description for Object Repository List&quot;,&quot;list&quot;:[]},&quot;TestDataStart&quot;:{&quot;key_name&quot;:&quot;TestData&quot;,&quot;value_name&quot;:&quot;test&quot;,&quot;description&quot;:&quot;This is description for Object Repository List&quot;,&quot;list&quot;:[]}}}</stringProp>
+                <stringProp name="Argument.value">{&quot;projectId&quot;:&quot;${__property(project_id)}&quot;,&quot;filePath&quot;:&quot;/home/ubuntu/AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Custom_ScriptGeneration-JAVA selenium/AlgoAFScript/pom.xml&quot;,&quot;fileName&quot;:&quot;pom.xml&quot;,&quot;data&quot;:&quot;&lt;project xmlns=\&quot;http://maven.apache.org/POM/4.0.0\&quot;\r\n\txmlns:xsi=\&quot;http://www.w3.org/2001/XMLSchema-instance\&quot;\r\n\txsi:schemaLocation=\&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\&quot;&gt;\r\n\t&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;\r\n\t&lt;groupId&gt;JavaSeleniumAlgoAfScripts&lt;/groupId&gt;\r\n\t&lt;artifactId&gt;JavaSeleniumAlgoAfScripts&lt;/artifactId&gt;\r\n\t&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;\r\n\t&lt;properties&gt;\r\n\t\t&lt;maven.compiler.source&gt;1.8&lt;/maven.compiler.source&gt;\r\n\t\t&lt;maven.compiler.target&gt;1.8&lt;/maven.compiler.target&gt;\r\n\t\t&lt;encoding&gt;UTF-8&lt;/encoding&gt;\r\n\t\t&lt;aspectj.version&gt;1.8.4&lt;/aspectj.version&gt;\r\n\t\t&lt;allure.version&gt;1.5.4&lt;/allure.version&gt;\r\n\t&lt;/properties&gt;\r\n\t&lt;dependencies&gt;\r\n\t&lt;dependency&gt;\r\n    &lt;groupId&gt;io.github.bonigarcia&lt;/groupId&gt;\r\n    &lt;artifactId&gt;webdrivermanager&lt;/artifactId&gt;\r\n    &lt;version&gt;5.6.4&lt;/version&gt;\r\n    &lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;junit&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;junit&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;4.13.2&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;selenium-java&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;4.19.1&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.slf4j&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.7.36&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-java&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;\r\n    &lt;artifactId&gt;commons-csv&lt;/artifactId&gt;\r\n    &lt;version&gt;1.11.0&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-picocontainer&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    \r\n&lt;/dependency&gt;\r\n\r\n&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;io.percy&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;percy-java-selenium&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;1.3.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;allure-cucumber-jvm&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.14.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-junit&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    \r\n&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;\r\n    &lt;artifactId&gt;pdfbox&lt;/artifactId&gt;\r\n    &lt;version&gt;2.0.29&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;com.openhtmltopdf&lt;/groupId&gt;\r\n    &lt;artifactId&gt;openhtmltopdf-pdfbox&lt;/artifactId&gt;\r\n    &lt;version&gt;1.0.10&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;com.openhtmltopdf&lt;/groupId&gt;\r\n    &lt;artifactId&gt;openhtmltopdf-core&lt;/artifactId&gt;\r\n    &lt;version&gt;1.0.10&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;org.xhtmlrenderer&lt;/groupId&gt;\r\n    &lt;artifactId&gt;flying-saucer-pdf&lt;/artifactId&gt;\r\n    &lt;version&gt;9.1.22&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n&lt;dependency&gt;\r\n        &lt;groupId&gt;com.itextpdf&lt;/groupId&gt;\r\n        &lt;artifactId&gt;itextpdf&lt;/artifactId&gt;\r\n        &lt;version&gt;5.5.13.2&lt;/version&gt;\r\n    &lt;/dependency&gt;\r\n    &lt;dependency&gt;\r\n        &lt;groupId&gt;com.itextpdf.tool&lt;/groupId&gt;\r\n        &lt;artifactId&gt;xmlworker&lt;/artifactId&gt;\r\n        &lt;version&gt;5.5.13.2&lt;/version&gt;\r\n    &lt;/dependency&gt;\r\n\r\n\r\n  \r\n&lt;!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-jvm --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-jvm&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    &lt;type&gt;pom&lt;/type&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n   &lt;groupId&gt;tech.grasshopper&lt;/groupId&gt;\r\n   &lt;artifactId&gt;extentreports-cucumber7-adapter&lt;/artifactId&gt;\r\n   &lt;version&gt;1.7.0&lt;/version&gt;\r\n    &lt;exclusions&gt;\r\n   \t&lt;exclusion&gt;\r\n   \t\t&lt;groupId&gt;org.projectlombok&lt;/groupId&gt;\r\n   \t\t&lt;artifactId&gt;lombok&lt;/artifactId&gt;\r\n   \t&lt;/exclusion&gt;\r\n   &lt;/exclusions&gt;\r\n&lt;/dependency&gt;\r\n\r\n&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.googlecode.json-simple&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;json-simple&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.1.1&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.json&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;json&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;20211205&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.esotericsoftware.yamlbeans&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;yamlbeans&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.13&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.11.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.fasterxml.jackson.dataformat&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;jackson-dataformat-yaml&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.11.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t&lt;groupId&gt;org.unix4j&lt;/groupId&gt;\r\n\t&lt;artifactId&gt;unix4j-command&lt;/artifactId&gt;\r\n\t&lt;version&gt;0.6&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;!-- https://mvnrepository.com/artifact/net.lingala.zip4j/zip4j --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;net.lingala.zip4j&lt;/groupId&gt;\r\n    &lt;artifactId&gt;zip4j&lt;/artifactId&gt;\r\n    &lt;version&gt;2.10.0&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\r\n\t\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;log4j&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;log4j&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.2.17&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.microsoft.sqlserver&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;mssql-jdbc&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;9.2.1.jre8&lt;/version&gt;\r\n\t\t\t\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;!-- &lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.vimalselvam&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;cucumber-extentsreport&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;3.0.2&lt;/version&gt;\r\n\t\t&lt;/dependency&gt; --&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.github.mkolisnyk&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;cucumber-runner&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.3.5&lt;/version&gt;\r\n\t\t\t\r\n\t\t\t\t&lt;exclusions&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xerces&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xerces&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xerces&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xercesImpl&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xml-apis&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xml-apis&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n        &lt;exclusion&gt;\r\n            &lt;groupId&gt;xml-apis&lt;/groupId&gt;\r\n            &lt;artifactId&gt;xmlParserAPIs&lt;/artifactId&gt;\r\n        &lt;/exclusion&gt;\r\n    &lt;/exclusions&gt; \r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;io.rest-assured&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;rest-assured&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;5.1.1&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;mysql&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;8.0.28&lt;/version&gt; \r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\t\t&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;org.apache.poi&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;poi&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;3.17&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;org.apache.poi&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;3.17&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.jcraft&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;jsch&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;0.1.55&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n    &lt;groupId&gt;org.mongodb&lt;/groupId&gt;\r\n    &lt;artifactId&gt;mongodb-driver&lt;/artifactId&gt;\r\n    &lt;version&gt;3.12.11&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\t\t&lt;!-- https://mvnrepository.com/artifact/commons-io/commons-io --&gt;\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;commons-io&lt;/groupId&gt;\r\n    &lt;artifactId&gt;commons-io&lt;/artifactId&gt;\r\n    &lt;version&gt;2.11.0&lt;/version&gt;\r\n&lt;/dependency&gt;\r\n\r\n\r\n\r\n&lt;dependency&gt;\r\n    &lt;groupId&gt;io.cucumber&lt;/groupId&gt;\r\n    &lt;artifactId&gt;cucumber-core&lt;/artifactId&gt;\r\n    &lt;version&gt;7.3.4&lt;/version&gt;\r\n    &lt;scope&gt;test&lt;/scope&gt;\r\n&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t&lt;groupId&gt;org.apache.pdfbox&lt;/groupId&gt;\r\n\t\t&lt;artifactId&gt;pdfbox&lt;/artifactId&gt;\r\n\t\t&lt;version&gt;2.0.21&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\r\n\t\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;gson&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;2.5&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n            &lt;groupId&gt;org.testng&lt;/groupId&gt;\r\n            &lt;artifactId&gt;testng&lt;/artifactId&gt;\r\n            &lt;version&gt;6.9.10&lt;/version&gt;\r\n            &lt;scope&gt;test&lt;/scope&gt;\r\n        &lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t    &lt;groupId&gt;net.rcarz&lt;/groupId&gt;\r\n\t\t    &lt;artifactId&gt;jira-client&lt;/artifactId&gt;\r\n\t\t    &lt;version&gt;0.5&lt;/version&gt;  \r\n\t\t    &lt;scope&gt;compile&lt;/scope&gt; \r\n \t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.apache.commons&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;commons-csv&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.9.0&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;3.0.0-M4&lt;/version&gt;\r\n\t\t\t&lt;type&gt;maven-plugin&lt;/type&gt;\r\n\t\t&lt;/dependency&gt;\r\n\t\t&lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;ru.yandex.qatools.allure&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;allure-cucumber-jvm-adaptor&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;1.6.4&lt;/version&gt;\r\n\t\t&lt;/dependency&gt;\r\n        &lt;dependency&gt;\r\n\t\t\t&lt;groupId&gt;com.github.stephenc.monte&lt;/groupId&gt;\r\n\t\t\t&lt;artifactId&gt;monte-screen-recorder&lt;/artifactId&gt;\r\n\t\t\t&lt;version&gt;0.7.7.0&lt;/version&gt;\r\n\t    &lt;/dependency&gt;\r\n\t&lt;/dependencies&gt;\r\n\t&lt;build&gt;\r\n\t&lt;plugins&gt;\r\n\t\t\t&lt;plugin&gt;\r\n\t\t\t\t&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;\r\n\t\t\t\t&lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;\r\n\t\t\t\t&lt;version&gt;2.19.1&lt;/version&gt;\r\n\t\t\t\t&lt;configuration&gt;\r\n\t\t\t\t\t&lt;testFailureIgnore&gt;false&lt;/testFailureIgnore&gt;\r\n\t\t\t\t&lt;/configuration&gt;\r\n\t\t\t\t&lt;dependencies&gt;\r\n\t\t\t\t    &lt;dependency&gt;\r\n        \t\t\t\t&lt;groupId&gt;org.apache.maven.surefire&lt;/groupId&gt;\r\n       \t\t\t\t\t&lt;artifactId&gt;surefire-junit47&lt;/artifactId&gt;\r\n        \t\t\t\t&lt;version&gt;2.19.1&lt;/version&gt;\r\n      \t\t\t\t&lt;/dependency&gt;\r\n\t\t\t\t\t&lt;dependency&gt;\r\n\t\t\t\t\t\t&lt;groupId&gt;org.aspectj&lt;/groupId&gt;\r\n\t\t\t\t\t\t&lt;artifactId&gt;aspectjweaver&lt;/artifactId&gt;\r\n\t\t\t\t\t\t&lt;version&gt;${aspectj.version}&lt;/version&gt;\r\n\t\t\t\t\t&lt;/dependency&gt;\r\n\t\t\t\t&lt;/dependencies&gt;\r\n\t\t\t&lt;/plugin&gt;\r\n\t\t&lt;/plugins&gt;\r\n\t&lt;/build&gt;\r\n\t&lt;reporting&gt;\r\n\t\t&lt;excludeDefaults&gt;true&lt;/excludeDefaults&gt;\r\n\t\t&lt;plugins&gt;\r\n\t\t\t&lt;plugin&gt;\r\n\t\t\t\t&lt;groupId&gt;ru.yandex.qatools.allure&lt;/groupId&gt;\r\n\t\t\t\t&lt;artifactId&gt;allure-maven-plugin&lt;/artifactId&gt;\r\n\t\t\t\t&lt;version&gt;2.5&lt;/version&gt;\r\n\t\t\t&lt;/plugin&gt;\r\n\t\t&lt;/plugins&gt;\r\n\t&lt;/reporting&gt;\r\n&lt;/project&gt;\r\nallure-cucumber-jvm-adaptor\r\n&quot;}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
           </elementProp>
         </HTTPSamplerProxy>
         <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
             <collectionProp name="Asserion.test_strings">
               <stringProp name="49586">200</stringProp>
             </collectionProp>
@@ -7867,7 +7491,7 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7904,9 +7528,9 @@ ${__setProperty(project_name, ${project_name})}
             <stringProp name="filename"></stringProp>
           </ResultCollector>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message">
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="319866162">AFSettings.json File saved successfully</stringProp>
+              <stringProp name="240304036">File saved successfully</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -7914,7 +7538,128 @@ ${__setProperty(project_name, ${project_name})}
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
           <hashTree/>
-          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table">
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update Script" enabled="true">
+          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/algoAF/project/uploadCustomAttachment?filePath=..%2FAlgoQA_Data%2Fuser_${__property(user_id)}%2Fproject_${__property(project_id)}%2FCustom_ScriptGeneration-JAVA%20selenium&amp;projectId=${__property(project_id)}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="false">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="240304036">File saved successfully</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
             <boolProp name="ResultCollector.error_logging">false</boolProp>
             <objProp>
               <name>saveConfig</name>
@@ -7966,7 +7711,263 @@ ${__setProperty(project_name, ${project_name})}
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Edit Scenario" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Custom setting editor">
+        <intProp name="ThreadGroup.num_threads">1</intProp>
+        <intProp name="ThreadGroup.ramp_time">1</intProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller">
+          <stringProp name="LoopController.loops">1</stringProp>
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+        </elementProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Configuration settings" enabled="true">
+          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/algoAF/project/getConfigSetting</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;projectId&quot;:&quot;${__property(project_id)}&quot;,&quot;folderPath&quot;:&quot;../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Utility&quot;,&quot;fileName&quot;:&quot;AFSettings.json&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Config setting" enabled="true">
+          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/algoAF/project/saveConfigSettingData</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;projectId&quot;:&quot;${__property(project_id)}&quot;,&quot;folderPath&quot;:&quot;../AlgoQA_Data/user_5489/project_${__property(project_id)}/Utility&quot;,&quot;fileName&quot;:&quot;AFSettings.json&quot;,&quot;data&quot;:{&quot;AutomationType&quot;:&quot;Java Selenium&quot;,&quot;CustomMethodFileName&quot;:[],&quot;CustomMethodsStart&quot;:{&quot;key_name&quot;:&quot;Custom Action&quot;,&quot;value_name&quot;:&quot;Method&quot;,&quot;description&quot;:&quot;This is description for Custom Method List&quot;,&quot;list&quot;:[]},&quot;ObjectRepositoryStart&quot;:{&quot;key_name&quot;:&quot;ObjectRepo&quot;,&quot;value_name&quot;:&quot;locator&quot;,&quot;description&quot;:&quot;This is description for Object Repository List&quot;,&quot;list&quot;:[]},&quot;TestDataStart&quot;:{&quot;key_name&quot;:&quot;TestData&quot;,&quot;value_name&quot;:&quot;test&quot;,&quot;description&quot;:&quot;This is description for Object Repository List&quot;,&quot;list&quot;:[]}}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="319866162">AFSettings.json File saved successfully</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Edit Scenario">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -8447,7 +8448,7 @@ ${__setProperty(project_name, ${project_name})}
         </HTTPSamplerProxy>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Object repository" enabled="true">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Object repository">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -8457,8 +8458,164 @@ ${__setProperty(project_name, ${project_name})}
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
-      <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Autogenerate test case" enabled="true">
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Object repository" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/project/getTypeId?filePath=../AlgoQA_Data/user_5840/project_25445</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Object repo add control" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/java/typeid/controlslist</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;path&quot;:&quot;../AlgoQA_Data/user_5840/project_25445/Node_Config&quot;}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Autogenerate test case">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -8468,8 +8625,250 @@ ${__setProperty(project_name, ${project_name})}
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
-      <hashTree/>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="X path mapping" enabled="true">
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Autogenerate test case 1" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/java/getModalSequence</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;project_id&quot;:25445,&quot;user_id&quot;:5838}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Autogenerate test case 2" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/java/api/newgetfeatures</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;project_id&quot;:25445,&quot;user_id&quot;:5838,&quot;node_name&quot;:&quot;Antique Necklace 1517441&quot;,&quot;node_id&quot;:&quot;a241ea88-c572-4297-b789-1cc4b8311b1b&quot;}&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Auto generateTC_" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/py/auto_generate_test_cases</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;project_id&quot;:25445,&quot;featurelist&quot;:[{&quot;key1&quot;:[{&quot;feature_name&quot;:&quot;Beautiful Necklaces for Women&quot;,&quot;feature_id&quot;:&quot;ae714d31-4221-46cc-90ab-42a3c2941cb8&quot;}],&quot;node_name&quot;:&quot;Antique Necklace 1517441&quot;,&quot;node_id&quot;:&quot;a241ea88-c572-4297-b789-1cc4b8311b1b&quot;}],&quot;user_id&quot;:5838}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="X path mapping">
         <intProp name="ThreadGroup.num_threads">1</intProp>
         <intProp name="ThreadGroup.ramp_time">1</intProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
@@ -8479,7 +8878,363 @@ ${__setProperty(project_name, ${project_name})}
           <boolProp name="LoopController.continue_forever">false</boolProp>
         </elementProp>
       </ThreadGroup>
-      <hashTree/>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="X path mapping">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/profiler/xpath</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="X path_file upload" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">C:\Users\Dell\Downloads\API-Gateway-SuperApp.postman_environment 4.json/project/xpathScrapFile?replace_exiting_file=0&amp;filePath=../AlgoQA_Data/user_5840/project_25445/Configuration&amp;scrapper=scrapper.csv</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+          <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+            <collectionProp name="HTTPFileArgs.files">
+              <elementProp name="C:\Users\Dell\Downloads\ScrapedFile (27).csv" elementType="HTTPFileArg">
+                <stringProp name="File.mimetype">text/csv</stringProp>
+                <stringProp name="File.path">C:\Users\Dell\Downloads\ScrapedFile (27).csv</stringProp>
+                <stringProp name="File.paramname">files</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">multipart/form-data  </stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="UpdateTypeID" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/project/updateTypeId</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;filePath&quot;:&quot;../AlgoQA_Data/user_5840/project_25445&quot;,&quot;project_id&quot;:25445,&quot;data&quot;:[{&quot;control_name&quot;:&quot;message&quot;,&quot;control_type&quot;:&quot;Label&quot;,&quot;pagename&quot;:&quot;Current Screen&quot;,&quot;control_identification_type&quot;:&quot;text&quot;,&quot;id&quot;:&quot;PostConditionId&quot;,&quot;refId&quot;:&quot;58fdde1f-2647-49a6-accc-660d9ed04edf&quot;,&quot;controlID&quot;:&quot;//button[contains(.,&apos;Add to Cart&apos;)]&quot;}]}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Xpath GO Back" enabled="true">
+          <stringProp name="HTTPSampler.domain">staging.algoshack.net</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/project/checkAccessSettingStatus</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;userId&quot;:5838,&quot;projectId&quot;:&quot;25445&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
     </hashTree>
   </hashTree>
 </jmeterTestPlan>
