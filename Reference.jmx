@@ -62,7 +62,6 @@
           </elementProp>
         </collectionProp>
       </elementProp>
-      <boolProp name="TestPlan.functional_mode">false</boolProp>
     </TestPlan>
     <hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
@@ -353,7 +352,7 @@ ${__setProperty(gender, ${gender})}</stringProp>
           </JSONPostProcessor>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Project" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Create Project">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/create_project</stringProp>
@@ -2727,7 +2726,7 @@ ${__setProperty(project_name, ${project_name})}
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Controls_1">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Controls_1" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/update_Control/e02821c3-c2db-48b8-9da1-89238c147d52/${__property(project_id)}?path=../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Node_Config/Home.json</stringProp>
@@ -2803,7 +2802,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Controls_2">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Controls_2" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/copyMoveVerifyControl/${__property(project_id)}?path=../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Node_Config/Home.json</stringProp>
@@ -2879,7 +2878,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Controls_3">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Save Controls_3" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/delete_Control/e02821c3-c2db-48b8-9da1-89238c147d52/${__property(project_id)}?path=../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}/Node_Config/Home.json</stringProp>
@@ -2955,7 +2954,7 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Enable all control">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Enable all control" enabled="true">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/enableAllControls</stringProp>
@@ -6434,7 +6433,7 @@ ${__setProperty(project_name, ${project_name})}
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">content-type</stringProp>
@@ -6447,7 +6446,7 @@ ${__setProperty(project_name, ${project_name})}
           </collectionProp>
         </HeaderManager>
         <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Apply" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Apply">
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/project/get_projects?limit=25&amp;offset=0&amp;search=&amp;startDate=2024-12-25+00:00:00&amp;endDate=2025-01-15+23:59:59&amp;orderDirection=</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
@@ -6556,144 +6555,10 @@ ${__setProperty(project_name, ${project_name})}
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Follow Me" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Follow Me_1">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/java/followme</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;project_id&quot;:25117,&quot;user_id&quot;:5489}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Create" enabled="true">
-          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/java/api/validateScenarioName</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;project_id&quot;:25117,&quot;user_id&quot;:5489,&quot;scenario name&quot;:&quot;Name&quot;}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
-            <boolProp name="ResultCollector.error_logging">false</boolProp>
-            <objProp>
-              <name>saveConfig</name>
-              <value class="SampleSaveConfiguration">
-                <time>true</time>
-                <latency>true</latency>
-                <timestamp>true</timestamp>
-                <success>true</success>
-                <label>true</label>
-                <code>true</code>
-                <message>true</message>
-                <threadName>true</threadName>
-                <dataType>true</dataType>
-                <encoding>false</encoding>
-                <assertions>true</assertions>
-                <subresults>true</subresults>
-                <responseData>false</responseData>
-                <samplerData>false</samplerData>
-                <xml>false</xml>
-                <fieldNames>true</fieldNames>
-                <responseHeaders>false</responseHeaders>
-                <requestHeaders>false</requestHeaders>
-                <responseDataOnError>false</responseDataOnError>
-                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-                <assertionsResultsToSave>0</assertionsResultsToSave>
-                <bytes>true</bytes>
-                <sentBytes>true</sentBytes>
-                <url>true</url>
-                <threadCounts>true</threadCounts>
-                <idleTime>true</idleTime>
-                <connectTime>true</connectTime>
-              </value>
-            </objProp>
-            <stringProp name="filename"></stringProp>
-          </ResultCollector>
-          <hashTree/>
-        </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click edit of created sceanrio" enabled="true">
-          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/project/action_list/25117</stringProp>
+          <stringProp name="HTTPSampler.path">/project/action_list/${__property(project_id)}</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -6757,10 +6622,10 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Submit" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Click Follow Me_2">
           <stringProp name="HTTPSampler.domain">${URL}</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/project/addScenarioNEW?filePath=../AlgoQA_Data/user_5489/project_25117</stringProp>
+          <stringProp name="HTTPSampler.path">/java/followme</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
           <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
@@ -6769,7 +6634,7 @@ ${__setProperty(project_name, ${project_name})}
             <collectionProp name="Arguments.arguments">
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&quot;project_id&quot;:25117,&quot;user_id&quot;:5489,&quot;data&quot;:[{&quot;scenario_id&quot;:&quot;24230608545.24245e78bf858-b8c7-4111-b0ce-08f85ae1aad5&quot;,&quot;scenario_name&quot;:&quot;Name&quot;,&quot;scenario_outline&quot;:&quot;Outline&quot;,&quot;custom_tag&quot;:[&quot;&quot;],&quot;node_id&quot;:&quot;8544ffca-dfd2-4057-9fb1-7c68b741cc38&quot;,&quot;node_name&quot;:&quot;Cart3&quot;,&quot;enable&quot;:[5489],&quot;folder_structure&quot;:&quot;&quot;,&quot;separate_feature&quot;:&quot;&quot;,&quot;scenario_steps&quot;:[{&quot;feature_name&quot;:&quot;Cart&quot;,&quot;feature_id&quot;:&quot;0f2e4d71-8b2d-4364-aae3-57a3d41fd34b&quot;,&quot;id&quot;:&quot;393603941292.641249ff3451a-7266-405d-8e63-9784241f2458&quot;,&quot;control_id&quot;:&quot;70960bbc-cf09-4ae9-abc3-2c4b84ce57f9&quot;,&quot;control_value&quot;:&quot;&quot;,&quot;control_name&quot;:&quot;Antique Earring 151815&quot;,&quot;control_type&quot;:&quot;Link&quot;,&quot;alias_name&quot;:&quot;&quot;,&quot;gwt_prefix&quot;:&quot;When&quot;,&quot;gwt_input&quot;:&quot;I&quot;,&quot;custom_action&quot;:&quot;&quot;,&quot;control_action&quot;:&quot;&quot;,&quot;action&quot;:&quot;&quot;,&quot;custom_value&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;},{&quot;feature_name&quot;:&quot;Cart&quot;,&quot;feature_id&quot;:&quot;0f2e4d71-8b2d-4364-aae3-57a3d41fd34b&quot;,&quot;id&quot;:&quot;133923048435.65067748ee0ef-1528-4b01-ac68-18874564b833&quot;,&quot;control_id&quot;:&quot;2e0582cd-2ef2-44af-a9fb-10b812c57ff8&quot;,&quot;control_value&quot;:&quot;&quot;,&quot;control_name&quot;:&quot;remove&quot;,&quot;control_type&quot;:&quot;Button&quot;,&quot;alias_name&quot;:&quot;&quot;,&quot;gwt_prefix&quot;:&quot;And&quot;,&quot;gwt_input&quot;:&quot;I&quot;,&quot;custom_action&quot;:&quot;&quot;,&quot;control_action&quot;:&quot;&quot;,&quot;action&quot;:&quot;&quot;,&quot;custom_value&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;}]}],&quot;reProfiling_Data&quot;:[],&quot;filePath&quot;:&quot;../AlgoQA_Data/user_5489/project_25117&quot;}</stringProp>
+                <stringProp name="Argument.value">{&quot;project_id&quot;:${__property(project_id)},&quot;user_id&quot;:${__property(user_id)}}</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
             </collectionProp>
@@ -6782,16 +6647,6 @@ ${__setProperty(project_name, ${project_name})}
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Message" enabled="false">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="2108641935">Scenario Created Successfully</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">16</intProp>
           </ResponseAssertion>
@@ -6834,19 +6689,140 @@ ${__setProperty(project_name, ${project_name})}
           </ResultCollector>
           <hashTree/>
         </hashTree>
-        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-          <collectionProp name="HeaderManager.headers">
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">content-type</stringProp>
-              <stringProp name="Header.value">application/json</stringProp>
-            </elementProp>
-            <elementProp name="" elementType="Header">
-              <stringProp name="Header.name">Authorization</stringProp>
-              <stringProp name="Header.value">Bearer ${__property(accessToken, error)}</stringProp>
-            </elementProp>
-          </collectionProp>
-        </HeaderManager>
-        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Add scenario name, outline and tag">
+          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/java/api/validateScenarioName</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;project_id&quot;:${__property(project_id)},&quot;user_id&quot;:${__property(user_id)},&quot;scenario name&quot;:&quot;${__RandomString(10,abcdefghijklmnopqrstuvwxyz,)}&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Submit">
+          <stringProp name="HTTPSampler.domain">${URL}</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/project/addScenarioNEW?filePath=../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;project_id&quot;:${__property(project_id)},&quot;user_id&quot;:${__property(user_id)},&quot;data&quot;:[{&quot;scenario_id&quot;:&quot;1245929975527.197a48a64c5-f39e-4d14-91e5-3c233086f3d5&quot;,&quot;scenario_name&quot;:&quot;nnn&quot;,&quot;scenario_outline&quot;:&quot;ooo&quot;,&quot;custom_tag&quot;:[&quot;ttt&quot;],&quot;node_id&quot;:&quot;7551ecb2-4df9-4184-80e2-a2115c12af07&quot;,&quot;node_name&quot;:&quot;PDP1&quot;,&quot;enable&quot;:[5489],&quot;folder_structure&quot;:&quot;&quot;,&quot;separate_feature&quot;:&quot;&quot;,&quot;scenario_steps&quot;:[{&quot;feature_name&quot;:&quot;PDP&quot;,&quot;feature_id&quot;:&quot;ece9313a-3cac-4f49-b8ca-2afc83cee6db&quot;,&quot;id&quot;:&quot;76747499004.3977a4de1b22-c3cd-433e-a1d5-bf917703073a&quot;,&quot;control_id&quot;:&quot;6234e3ac-b090-4820-92ce-39f17e6d8ec7&quot;,&quot;control_value&quot;:&quot;&quot;,&quot;control_name&quot;:&quot;M&quot;,&quot;control_type&quot;:&quot;Label&quot;,&quot;alias_name&quot;:&quot;&quot;,&quot;gwt_prefix&quot;:&quot;When&quot;,&quot;gwt_input&quot;:&quot;I&quot;,&quot;custom_action&quot;:&quot;&quot;,&quot;control_action&quot;:&quot;&quot;,&quot;action&quot;:&quot;&quot;,&quot;custom_value&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;},{&quot;feature_name&quot;:&quot;PDP&quot;,&quot;feature_id&quot;:&quot;ece9313a-3cac-4f49-b8ca-2afc83cee6db&quot;,&quot;id&quot;:&quot;137639121351.04966cc6bc12-79fe-4d8e-a3ea-769ca6db9160&quot;,&quot;control_id&quot;:&quot;da0372c9-1008-4976-bd6b-08d69279fd64&quot;,&quot;control_value&quot;:&quot;&quot;,&quot;control_name&quot;:&quot;ADD TO BAG&quot;,&quot;control_type&quot;:&quot;Label&quot;,&quot;alias_name&quot;:&quot;&quot;,&quot;gwt_prefix&quot;:&quot;And&quot;,&quot;gwt_input&quot;:&quot;I&quot;,&quot;custom_action&quot;:&quot;&quot;,&quot;control_action&quot;:&quot;&quot;,&quot;action&quot;:&quot;&quot;,&quot;custom_value&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;},{&quot;feature_name&quot;:&quot;PDP&quot;,&quot;feature_id&quot;:&quot;ece9313a-3cac-4f49-b8ca-2afc83cee6db&quot;,&quot;id&quot;:&quot;263844334484.372964444d001-1c41-493e-aacb-e7b60ccd848d&quot;,&quot;control_id&quot;:&quot;8bfd0e30-db14-468b-bc86-8bb84b427190&quot;,&quot;control_value&quot;:&quot;&quot;,&quot;control_name&quot;:&quot;Bag&quot;,&quot;control_type&quot;:&quot;Link&quot;,&quot;alias_name&quot;:&quot;&quot;,&quot;gwt_prefix&quot;:&quot;And&quot;,&quot;gwt_input&quot;:&quot;I&quot;,&quot;custom_action&quot;:&quot;&quot;,&quot;control_action&quot;:&quot;&quot;,&quot;action&quot;:&quot;&quot;,&quot;custom_value&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;}]}],&quot;reProfiling_Data&quot;:[],&quot;filePath&quot;:&quot;../AlgoQA_Data/user_${__property(user_id)}/project_${__property(project_id)}&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Code" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">16</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>true</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <sentBytes>true</sentBytes>
+                <url>true</url>
+                <threadCounts>true</threadCounts>
+                <idleTime>true</idleTime>
+                <connectTime>true</connectTime>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Delete Project" enabled="false">
         <intProp name="ThreadGroup.num_threads">1</intProp>
